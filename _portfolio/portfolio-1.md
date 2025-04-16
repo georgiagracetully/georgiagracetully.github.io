@@ -1,7 +1,11 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Rotation Project 1: Rotskoff Group"
+excerpt: "Using Neural Networks for Quantum MD Simulations <br/><img src='/images/rot_proj_1_image.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Here are the slides of my first rotation project at Stanford, in the Rotskoff group. I wrote my own implementation of Schrodinger Network (in a way that made the most sense to me, a ML and PyTorch novice), and then ran some tests using a training dataset of DFT calcuations on a simple system of 16 water molecules. 
+
+The coolest thing about this network is that the model is trained not only on the labels (in this case, the energies computed via DFT), but also on the energy gradients. In physics, the gradient of a system's energy with respect to atomic positions corresponds to the forces acting on the atoms. These learned forces can then be used to accelerate molecular dynamics (MD) simulations, while still capturing quantum mechanical interactions.
+
+[📄 View PDF of PowerPoint Slides](/files/Schnet_Architecture.pdf)
