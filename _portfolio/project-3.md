@@ -1,6 +1,6 @@
 ---
 title: "Summer Project 1: Das Lab"
-excerpt: "Evaluating heterogeneity algorithms on ROOL RNA<br/><img src='/images/summer_proj_image.png'>"
+excerpt: "Evaluating heterogeneity algorithms on ROOL RNA"
 collection: portfolio
 ---
 
