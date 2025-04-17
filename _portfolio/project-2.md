@@ -1,6 +1,6 @@
 ---
 title: "Rotation Project 2: Das Lab"
-excerpt: "Evaluating DynaMight for Conformational Heterogeneity of the Tetrahymena Ribozyme<br/><img src='/images/rot_proj_1_image.png'>"
+excerpt: "Evaluating DynaMight for Conformational Heterogeneity of the Tetrahymena Ribozyme<br/><img src='/images/rot_proj_2_image.png'>"
 collection: portfolio
 ---
 A hypothetical scenario: the world was flash frozen in an instant by an alien species. In order to study the most dominant earthy organism - humans, the alien species decides that the primary function of humans can be deciphered by figuring out the most populated state and lowest energy state (according to the laws of thermodynamics). Thus, the aliens scientifcally conclude that the primary function of humans is to lay flat on a surface, with eyes closed, in a dreamlike state. 
