@@ -9,7 +9,6 @@ One of the most exciting structures solved by Rachael Kretsch using cryo-EM was 
 Based on cluster profiles from all algorithms, we concluded that only two dominant states were present in the particle stack. To see how each novel algorithm clustered particles (color labelled by the initial 3D classification job ), you can copy the making_plots directory in /notebooks folder, and then interactively play around with Making_plots.ipynb. 
 
 [View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/making_plots/Making_plots.ipynb)
-/Users/georg/Downloads/github_projects/georgiagracetully.github.io/notebooks/making_plots/Making_plots.ipynb
 
 <br/><img src='/images/image9.png'>" <br/><img src='/images/image10.png'>
 Pretty obvious from images above which conformation is "open" or "closed" . 
