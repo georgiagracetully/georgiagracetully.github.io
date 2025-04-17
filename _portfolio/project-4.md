@@ -10,7 +10,7 @@ A few years ago, the Das Lab also released a [paper](https://pmc.ncbi.nlm.nih.go
 
 Using the EternaFold dataset, I evaluated RibonanzaNet's performance on all tasks, regenerating figures in the EternaBench paper as well as creating my own based on raw data. I returned to this task a few months later, also adding RNA-FM into the mix. 
 
-#RibonanzaNet Secondary Structure Evaluation: 
+# RibonanzaNet Secondary Structure Evaluation: 
 
 Regenerated plot from EternaBench paper on ArchiveII dataset of secondary structures: 
 
@@ -22,7 +22,7 @@ Here is a barchart comparing the F-scores of a handful of models evaluated, incl
 
 <br/><img src='/images/rnet_archiveII_barchart.png'>
 
-#RibonanzaNet Chemical Mapping Evaluation 
+# RibonanzaNet Chemical Mapping Evaluation 
 
 A dataset of chemical mapping profiles using the [SHAPE](https://pmc.ncbi.nlm.nih.gov/articles/PMC4259394/pdf/nihms606325.pdf) reagent 1M7 of natural and human-designed RNAs was compiled, and correlation coefficients were computed, with z-score heatmaps generated. 
 
@@ -38,14 +38,21 @@ However, I am not confident that this 1M7 is a good dataset to evaluate performa
   <img src="/images/example_reactivity_profile_2.png" style="width: 45%;">
 </div>
 
-
 You can play around with reactivity profiles yourself my copying the folder in this repository /notebooks/eternabench_chemmapping_simulation (and all the contents within it) here : 
 
 [View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/eternabench_chemmapping_simulation/EB_Chemmapping_Profile_EVAL.ipynb)
 
-#RibonanzaNet Riboswitch Ligand-Binding Prediction Evaluation 
+# RibonanzaNet Riboswitch Ligand-Binding Prediction Evaluation 
 
+The last metric evaluated was the preditive ability of each model to predict the ligand-binding affinity of riboswitches indirectly through the probability of the the terminal base pair in the aptamer hairpin. The predicted binding affinity based on constrained partition function calcuations will also be evaluated in my next project that includes how I finetuned RibonanzaNet on this data. 
 
+These riboswitches were designed so that upon binding one of the input ligand aptamers, flavin mononucleotide (FMN), theophylline (Theo), or tryptophan (Trp), the MS2 protein aptamer becomes more accessible, thereby increasing binding affinity of fluorescent protein. Experimental measurements of MS2 protein binding affinities with and without ligand present (K+lig and K-lig) were performed on this diverse dataset.  
+
+Because the MS2 aptamer is a hairpin, a zeroshot evaluation on riboswitch binding affinities without ligand bound (K-lig) was performed using RibonanzaNet-SS bpp matrices on the EternaBench holdout dataset. Evaluating on checkpoints of RibonanzaNet-SS trained with a variety of data scales allowed us to further determine the extent that data quantity, rather than model design, improved accuracy of predictions.  
+
+<br/><img src='images/rnetss_comparing_datascale_rswitch_bps_with_other_packages.pdf"> 
+
+How I generated these predictions can be accessed in [this](https://github.com/georgiagracetully/RibonanzaNet_EternaBench_Eval) github repo. 
 
 Relevant Papers: 
 
