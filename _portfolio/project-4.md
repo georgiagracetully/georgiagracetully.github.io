@@ -1,6 +1,6 @@
 ---
 title: "Summer Project 2: Das Lab"
-excerpt: "Benchmarking Novel RNA Foundational Models on EternaBench Dataset <br/><img src='/images/summer_proj_image.png'>"
+excerpt: "Benchmarking Novel RNA Foundational Models on EternaBench Dataset <br/><img src='/images/rnet_archiveII_heatmap.png'>"
 collection: portfolio
 ---
 
