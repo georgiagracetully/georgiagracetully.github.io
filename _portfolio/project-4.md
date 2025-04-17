@@ -50,7 +50,7 @@ These riboswitches were designed so that upon binding one of the input ligand ap
 
 Because the MS2 aptamer is a hairpin, a zeroshot evaluation on riboswitch binding affinities without ligand bound (K-lig) was performed using RibonanzaNet-SS bpp matrices on the EternaBench holdout dataset. Evaluating on checkpoints of RibonanzaNet-SS trained with a variety of data scales allowed us to further determine the extent that data quantity, rather than model design, improved accuracy of predictions.  
 
-<br/><img src='images/rnetss_comparing_datascale_rswitch_bps_with_other_packages.pdf"> 
+<br/><img src="images/rnetss_comparing_datascale_rswitch_bps_with_other_packages.pdf"> 
 
 How I generated these predictions can be accessed in [this](https://github.com/georgiagracetully/RibonanzaNet_EternaBench_Eval) github repo. 
 
