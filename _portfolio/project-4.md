@@ -33,14 +33,17 @@ Here is a barchart comparing Pearson Correlation Coefficients with RibonanzaNet-
 However, I am not confident that this 1M7 is a good dataset to evaluate performance of models, considering it is very noisy and spiky. Here are two reactivity profiles that show 1M7 raw data with some of the package predicted reactivity profiles. Note, the simulated reactivity profile form secondary structure prediction models comes from converting base pairing matrices to probability unpaired vectors (punp vectors) which is outlined in the Das Lab [arnie](https://github.com/DasLab/arnie) wrapper. 
 
 
-<br/><img src='/images/example_reactivity_profile.png'>
-<br/><img src='/images/example_reactivity_profile_2.png'>
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/example_reactivity_profile.png" style="width: 45%;">
+  <img src="/images/example_reactivity_profile_2.png" style="width: 45%;">
+</div>
 
 
 You can play around with reactivity profiles yourself my copying the folder in this repository /notebooks/eternabench_chemmapping_simulation (and all the contents within it) here : 
 
 [View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/eternabench_chemmapping_simulation/EB_Chemmapping_Profile_EVAL.ipynb)
 
+#RibonanzaNet Riboswitch Ligand-Binding Prediction Evaluation 
 
 
 
