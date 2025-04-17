@@ -8,18 +8,37 @@ One of the most exciting breakthroughs in structural biology and machine learnin
 
 A few years ago, the Das Lab also released a [paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC9839360/) with benchmark datasets of RNA secondary structure, chemical mapping profiles, and ligand binding equilibrium constants. Additionally, this paper released a statistical model, EternaFold, that used the baseline [CONTRAfold](https://watermark.silverchair.com/bioinformatics_22_14_e90.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA3wwggN4BgkqhkiG9w0BBwagggNpMIIDZQIBADCCA14GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMP41xOOnatJihU9VEAgEQgIIDL2VKJVEE-S7QBkTSEd2yy-Qvw0dnh4G1HMx4ubVKXs5F1qNs9tPBYLrjVdTDy1iR6YbeSbVHf7sjLkVrTj-sol1mDai6McbpWRYJu8eqEYvGkFMiHedwBtEay4VXYy8SlMqlEtXZwcsQYMU3IZlq91shmJWtvh0if-Ie8oCSpDckQBy07BOAYcGuexd9x5VqQSpH2FlrjEo3g24gPQ7kFna63JfmtVbnnC-qFqrEdvkRnrDytMGID324EKTe08RW-tuT1eclQQAF-hfXOByc1O5SkU3WhRUj4YaVrn0OVzksXPIaxxDpkOukeX0NYjpg5DR9_Hg-bCxJWUdMfkbhxD23ONzRsI4euXZtc32JczR60ctxHlv15vh8CKDs0GLrlCM0rATz1zloqn6MY8Xl5XHyZEhdZFwSsuV0MSDnWsPN4sDMpcga0WhDeliGZ8AArngVIfpRGJkpFrBSZSpAt4eDXQIVsz6t-6gsD_cUqRdahl1Z5G6nN079yICBnT_rDVaoKL4DdDq2uQgVSzsJKxyGK2QHgb0qtmSm1d_7FtEOcuUk4VwhdiRWQxcxn6sAhBjY8s2w7vBTJqzGGae599ojvSeTudGsP3xFcmxtV1svNib1Q20dcF8peUkRtOTqZTH205k-MNknCDjIN7c7tlbEUxP2qyE6BFQhW4uDZF3IFZKRTBFTp36sYDFL8jxzkgXlM6jeQSBFUaaviNFZfNouiMzxcpMcnwdcxkOehnfLAVQZignDJk1JBrAmPHkrWOgu2jDCB8H8M24mg2XyN9C3MaJurrJ7SMmTbKgcvLiLZYHUw-XmouIft0rzz0nltorCpLHpHdpezUTnDivXmTImX4lcxZCQBBuH80vytaEgPcJq5J9j9A1EOnTGOjYUX1VcEre3fYViCB4gdg20kyIZcRKrsZpLHBA8AgANf0EDh-sDLFugNbZuCXmTd6PCckuaVStxAdFqs84u7J72XZ_WJmvDEXzzigHvQrA9-jaSPN7p2KjMOuPaNJT3YNTDuouNA5jzzaBLn4gcWQ6Nij_9eurcJPS02CD1otGEE8JJz0Bd2Dllp6DTQ5EAI8Th) architecture but trained on all three unique datasets. EternaFold was shown to outperform all current models on all prediction tasks. 
 
-Using the EternaFold dataset, I evaluated RibonanzaNet's performance on all tasks, regenerating figures in the EternaBench paper as well as creating my own based on raw data. Later I also added RNA-FM into the mix. 
+Using the EternaFold dataset, I evaluated RibonanzaNet's performance on all tasks, regenerating figures in the EternaBench paper as well as creating my own based on raw data. I returned to this task a few months later, also adding RNA-FM into the mix. 
 
-
-RibonanzaNet Secondary Structure Evaluation: 
+#RibonanzaNet Secondary Structure Evaluation: 
 
 Regenerated plot from EternaBench paper on ArchiveII dataset of secondary structures: 
 
-<br/><img src='/images/rnet_archiveII_heatmap.png'>"  
+<br/><img src='/images/rnet_archiveII_heatmap.png'>  
 
-This is RibonanzaNet-SS trained with different checkpoints that vary in magnitude by the amount of training data . 
+This is RibonanzaNet-SS trained with different checkpoints that vary in magnitude by the amount of training data. RibonanaNet is the RibonanzaNet-SS model trained on all 2 million sequences in the Ribonanza Dataset. RibonanzaNet A, B, C, D are models trained on 140k, 14k, 7k, and 1.4k training data, respectively. 
 
-FINISH 
+Here is a barchart comparing the F-scores of a handful of models evaluated, including RNA-FM : 
+
+<br/><img src='/images/rnet_archiveII_barchart.png'>
+
+#RibonanzaNet Chemical Mapping Evaluation 
+
+A dataset of chemical mapping profiles using the [SHAPE](https://pmc.ncbi.nlm.nih.gov/articles/PMC4259394/pdf/nihms606325.pdf) reagent 1M7 of natural and human-designed RNAs was compiled, and correlation coefficients were computed, with z-score heatmaps generated. 
+
+Here is a barchart comparing Pearson Correlation Coefficients with RibonanzaNet-SS, RibonanzaNet-2A3, and RibonanzaNet-DMS. 
+
+<br/><img src='/images/pcc_chemmapping_barchart.svg'>
+
+However, I am not confident that this 1M7 is a good dataset to evaluate performance of models, considering it is very noisy and spiky. Here are two reactivity profiles that show 1M7 raw data with some of the package predicted reactivity profiles. Note, the simulated reactivity profile form secondary structure prediction models comes from converting base pairing matrices to probability unpaired vectors (punp vectors) which is outlined in the Das Lab [arnie](https://github.com/DasLab/arnie) wrapper. 
+
+
+<br/><img src='/images/example_reactivity_profile.png'>
+<br/><img src='/images/example_reactivity_profile_2.png'>
+
+
+
+
 
 
 
