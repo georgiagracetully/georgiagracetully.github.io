@@ -10,6 +10,8 @@ Based on cluster profiles from all algorithms, we concluded that only two domina
 
 [View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/making_plots/Making_plots.ipynb)
 
+Note: By just scanning the notebook you may think that particle id's are colored with corresponding clusters from each algorithm, but they are colored according the their separation into "open" and "closed" states by the simple 3D classification algorithm, which matched clusters from all four deep learning algorithms. However, if you look at e2gmm plot in Figure 4, you can see noticeable overlap of particles that were identified into different clusters. 
+
 <br/><img src='/images/image9.png'>" <br/><img src='/images/image10.png'>
 Pretty obvious from images above which conformation is "open" or "closed" . 
 
