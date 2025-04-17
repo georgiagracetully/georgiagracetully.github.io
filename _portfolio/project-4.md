@@ -37,8 +37,9 @@ However, I am not confident that this 1M7 is a good dataset to evaluate performa
 <br/><img src='/images/example_reactivity_profile_2.png'>
 
 
+You can play around with reactivity profiles yourself my copying the folder in this repository /notebooks/eternabench_chemmapping_simulation (and all the contents within it) here : 
 
-
+[View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/eternabench_chemmapping_simulation/EB_Chemmapping_Profile_EVAL.ipynb)
 
 
 
