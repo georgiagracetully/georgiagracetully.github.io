@@ -23,16 +23,27 @@ A pilot experiment was performed July 2024 performing the SHAPE chemical mapping
 
 
 (1)	Clamp, M.; Fry, B.; Kamal, M.; Xie, X.; Cuff, J.; Lin, M. F.; Kellis, M.; Lindblad-Toh, K.; Lander, E. S. Distinguishing Protein-Coding and Noncoding Genes in the Human Genome. Proc. Natl. Acad. Sci. U. S. A. 2007, 104 (49), 19428–19433. 
+
 (2)	Schadt, E. E.; Edwards, S. W.; GuhaThakurta, D.; Holder, D.; Ying, L.; Svetnik, V.; Leonardson, A.; Hart, K. W.; Russell, A.; Li, G.; Cavet, G.; Castle, J.; McDonagh, P.; Kan, Z.; Chen, R.; Kasarskis, A.; Margarint, M.; Caceres, R. M.; Johnson, J. M.; Armour, C. D.; Garrett-Engele, P. W.; Tsinoremas, N. F.; Shoemaker, D. D. A Comprehensive Transcript Index of the Human Genome Generated Using Microarrays and Computational Approaches. Genome Biol. 2004, 5 (10), R73. 
+
 (3)	Palazzo, A. F.; Lee, E. S. Non-Coding RNA: What Is Functional and What Is Junk? Front. Genet. 2015, 6, 2. 
+
 (4)	Richard Boland, C. Non-Coding RNA: It’s Not Junk. Dig. Dis. Sci. 2017, 62 (5), 1107–1109. 
+
 (5)	Nemeth, K.; Bayraktar, R.; Ferracin, M.; Calin, G. A. Non-Coding RNAs in Disease: From Mechanisms to Therapeutics. Nat. Rev. Genet. 2024, 25 (3), 211–232. 
+
 (6)	Kozlovskii, I.; Popov, P. Spatiotemporal Identification of Druggable Binding Sites Using Deep Learning. Commun. Biol. 2020, 3 (1), 618. 
+
 (7)	Yang, C.; Chen, E. A.; Zhang, Y. Protein-Ligand Docking in the Machine-Learning Era. Molecules 2022, 27 (14), 4568. 
+
 (8)	Krishnan, S. R.; Bung, N.; Bulusu, G.; Roy, A. Accelerating DE Novo Drug Design against Novel Proteins Using Deep Learning. J. Chem. Inf. Model. 2021, 61 (2), 621–630. 
+
 (9)	Berman, H. M. The Protein Data Bank. Nucleic Acids Res. 2000, 28 (1), 235–242. 
+
 (10)Seetin, M. G.; Kladwang, W.; Bida, J. P.; Das, R. Massively Parallel RNA Chemical Mapping with a Reduced Bias MAP-Seq Protocol. In Methods in Molecular Biology; Humana Press: Totowa, NJ, 2014; pp 95–117.
+
 (11) He, S.; Huang, R.; Townley, J.; Kretsch, R. C.; Karagianes, T. G.; Cox, D. B. T.; Blair, H.; Penzar, D.; Vyaltsev, V.; Aristova, E.; Zinkevich, A.; Bakulin, A.; Sohn, H.; Krstevski, D.; Fukui, T.; Tatematsu, F.; Uchida, Y.; Jang, D.; Lee, J. S.; Shieh, R.; Ma, T.; Martynov, E.; Shugaev, M. V.; Bukhari, H. S. T.; Fujikawa, K.; Onodera, K.; Henkel, C.; Ron, S.; Romano, J.; Nicol, J. J.; Nye, G. P.; Wu, Y.; Choe, C.; Reade, W.; Eterna participants; Das, R. Ribonanza: Deep Learning of RNA Structure through Dual Crowdsourcing. bioRxivorg 2024.
+
 (12) Martin, S.; Blankenship, C.; Rausch, J. W.; Sztuba-Solinska, J. Using SHAPE-MaP to Probe Small Molecule-RNA Interactions. Methods 2019, 167, 105–116. 
 
 
