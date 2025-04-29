@@ -28,6 +28,10 @@ Possible explanations of Null Hypothesis:
 
 The best results qualitatively from this pilot experiment came from RibonanzaNet-SM 005. This model was trained with a final decoder layer of 8 reactivity profiles, the first seven being *reactivity differences* between the small molecule condition and a no small molecule baseline (I called this baseline "NoDr" for "No Drug", since all of these molecules are drugs). The last vector was the absolute reactivity profile without small molecule incubation. The idea is that since the loss function during training was based on the MSE of predictions, this would normalize trianing so that it would not overfit to the data with the largest magnitude of differences in the reactivity under small molecule incubation. 
 
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/eryt_qual_004.png" style="width: 45%;">
+  <img src="/images/eryt_qual_005.png" style="width: 45%;">
+</div>
 
 
 
