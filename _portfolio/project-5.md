@@ -16,7 +16,18 @@ While I unfortunately had to forfeit this project, I did receive some preliminar
 
 A pilot experiment was performed July 2024 performing the SHAPE chemical mapping protocol on a library of 3000 RNAs designed to have pseudoknot motifs incubated with small molecules known to bind RNA - Argininamide, Erythoromycin, Kanamycin, Mitoxantrone, Paromomycin, Spectinomcin, and Tetracycline. 
 
+I finetuned multiple models RibonanzaNet, adjusting hyperparameters and model architecture. At first, I tried to finetune RibonanzaNet alongside an embedding generator block so that the model could generalize beyond the initial 7 small molecules in the training data. But, the training time was taking too long (around 2 hours/epoch) for a pilot experiment with the primary goal being to test whether RibonanzaNet already contains the information necessary within RNA sequence and/or pairwise embeddings to predict interactions with small molecules (given just a small initial amount of data for training). 
 
+The base RibonanzaNet model was trained on data from two sepearate chemical probing techniques: SHAPE (Selective Acylation of the 2' Hydroxyl as Analyzed by Primer Extension) probing with the electrophilic reagent 2-aminopyridine-3-carboxylic acid imidazolide (2A3) [13] as well as DMS chemical footprinting [14]. My initial experiment was simple: adjust the final decoder layer of RibonanzaNet to instead predict 2-8 reactivity profiles, with each reactivity profile being a new small molecule condition. I would first assess model perforance through quick visual checks on heat maps of experimental and predictied reactivity profiles under each condition. If the predictions looked promising, I would then generate a more robust quantitative analysis to benchmark model predictions. 
+
+## The Experiment 
+
+Experimental Null Hypothesis: RibonanzaNet cannot be finetuned on 1k new labeled examples of RNA/small-molecule chemical reactivity profiles to make accurate predictions on the test data. 
+
+Possible explanations of Null Hypothesis: 
+    1) The experimental data itself is pure noise. There is no predictable pattern that even a million-parameter LLM can learn. 
+    2) The model needs more diverse training data to learn. 
+    3) The model needs more paramters or a more sophisticated architecture tailored to the new tast in order to learn RNA-small molecule reactivity profiles . 
 
 
 
