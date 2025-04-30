@@ -32,10 +32,10 @@ Here are some selected quantitative results , however, you can play around with 
 
 An example of different experimental and predicted reactivity *differences* on a sequence from the test set from RibonanzaNet 005 : 
 
-###Sequence 13
+### Sequence 13
 <br/><img src='/images/normalized_005_sequence_13.png'>"
 
-###Sequence 2 
+### Sequence 2 
 <br/><img src='/images/normalized_005_sequence_2.png'>"
 
 A look at individual reactivity profiles (not normalized) for three conditions for sequence 2: 
@@ -43,10 +43,12 @@ A look at individual reactivity profiles (not normalized) for three conditions f
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="/images/mito_005_sequence_2.png" style="width: 30%;">
   <img src="/images/spec_005_sequence_2.png" style="width: 30%;">
-  <img src="/images/tetr_005_sequence_2.png.png" style="width: 30%;">
+  <img src="/images/tetr_005_sequence_2.png" style="width: 30%;">
 </div>
 
+Here, I am showing how adding in the raw reactivity vector during training helps the model pick up on differences between conditions with less binding events (such as Erythromycin ): 
 
+On the left, is reactivity difference heatmap for sequences 50-100 without the raw reactivity vector during training, and on the right is with the raw reactivity vector included. You can see that there are a few sequences with what appears to be significant reactivity differences learned by the right model. 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="/images/eryt_qual_004.png" style="width: 45%;">
