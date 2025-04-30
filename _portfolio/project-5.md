@@ -42,10 +42,19 @@ A look at individual reactivity profiles (not normalized) for three conditions f
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="/images/mito_005_sequence_2.png" style="width: 30%;">
-  <img src="/images/spec_005_sequence_2.png" style="width: 30%;">
+  <img src="/images/kana_005_sequence_2.png" style="width: 30%;">
   <img src="/images/tetr_005_sequence_2.png" style="width: 30%;">
 </div>
 
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/spec_005_sequence_2.png" style="width: 30%;">
+  <img src="/images/eryt_005_sequence_2.png" style="width: 30%;">
+  <img src="/images/paro_005_sequence_2.png" style="width: 30%;">
+</div>
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/argi_005_sequence_2.png" style="width: 30%;">
+</div>
 
 Here, I am showing how adding in the raw reactivity vector during training helps the model pick up on differences between conditions with less binding events (such as Erythromycin ): 
 
