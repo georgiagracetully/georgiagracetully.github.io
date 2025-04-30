@@ -87,7 +87,7 @@ Tetr    0.552999
 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/images/quant_analysis_2.png">
+  <img src="/images/quant_analysis.png">
 </div>
 
 
