@@ -56,15 +56,19 @@ A look at individual reactivity profiles (not normalized) for three conditions f
   <img src="/images/argi_005_sequence_2.png" style="width: 30%;">
 </div>
 
+From these profiles, you can see that the model may not be as good at predicting large reactivity differences for conditions with a lower frequency of significant reactivity differences. 
+
 Here, I am showing how adding in the raw reactivity vector during training helps the model pick up on differences between conditions with less binding events (such as Erythromycin ): 
 
 On the left, is reactivity difference heatmap for sequences 50-100 without the raw reactivity vector during training, and on the right is with the raw reactivity vector included. You can see that there are a few sequences with what appears to be significant reactivity differences learned by the right model. 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/images/eryt_qual_004.png" style="width: 45%;">
-  <img src="/images/eryt_qual_005.png" style="width: 45%;">
+  <img src="/images/eryt_qual_004.png">
 </div>
 
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/eryt_qual_005.png">
+</div>
 
 
 
