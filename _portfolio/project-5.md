@@ -76,16 +76,19 @@ There is still much need for improvment in terms of accuracy, however this is a 
 
 One quantitative metric I used was to flag nucleotides that are in top 80% of reactivity difference, compute a sliding window sum of flagged nucleotides, and then compute a PCC of predictions with experimental flagged nucleotides. 
 
-Average PCC per condition:
-Argi    0.164781
-Eryt    0.197671
-Kana    0.221571
-Mito    0.651125
-Paro    0.436432
-Spec    0.170088
-Tetr    0.552999
-dtype: float64
+Average PCC per condition:  
+Argi    0.164781  
+Eryt    0.197671  
+Kana    0.221571  
+Mito    0.651125  
+Paro    0.436432  
+Spec    0.170088  
+Tetr    0.552999  
 
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/quant_analysis_2.png">
+</div>
 
 
 
