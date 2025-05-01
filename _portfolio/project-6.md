@@ -18,13 +18,14 @@ However, I furthermore wanted to fine-tune RibonanzaNet to predict ligand-bindin
 | Theophylline | GAUACCAG&CCCUUGGCAGC     | (xxx((((&)xxx)))xxx)          | 2.0 mM         | 20                |
 
 
+
 This table is adapted from Supplementary Table 14 from the [paper](https://www.nature.com/articles/s41592-022-01605-0#Sec36) **RNA secondary structure packages evaluated and improved by high-throughput experiments** . 
 
 My first attempt at fine-tuning involved manipulating how the model processed the *sequence features*. The most simple example inlcuded just passing the mean of the sequence feature into a linear layer with an output of 2 (for both the log of the riboswitch KD with and without ligand bound). However, my attempts at processing the sequence features did not work, and predictions on the test set were essentially the same for each sequence. This makes sense because averaging the sequence embeddings effectively collapses all positional and relational information. Since the global RNA structure is the key component to predicting ligand binding and recognition, during fine-tuning the model was unable to learn anything meaningful. 
 
 My second attempt at fine-tuning involved manipulating the *pairwise features* . My inital simple manipulation techinques did not work (including just averaging the flattened pairwise features before passing through a linear layer). This makes sense for the same reason averaging the sequence embeddings directly did not work. However, when I averaged each structural channel of the pairwise features, annd then averaged the pooled channels before passing it through a linear layer, I allowed the model to pick up on the relationship between ligand binding and RNA secondary/tertiary structure. 
 
-I actually fine-tuned RibonanzaNet on this data (which I called the finetuned model "RibonanzaNet-EB" ) within a Jupyter NB with a gpu backend through a slurm supercomputer. You can see the Jupyter NB [Here](). You can download the training data from the archived [EB repository](https://github.com/eternagame/EternaBench/) and [RibonanzaNet](https://github.com/Shujun-He/RibonanzaNet). You can also use another RNA-LLM . 
+I actually fine-tuned RibonanzaNet on this data (which I called the finetuned model "RibonanzaNet-EB" ) within a Jupyter NB with a gpu backend through a slurm supercomputer. You can see the Jupyter NB [Here](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/eb_data/RibonanzaNet_EB_RS_tuning.ipynb). You can download the training data from the archived [EB repository](https://github.com/eternagame/EternaBench/) and [RibonanzaNet](https://github.com/Shujun-He/RibonanzaNet). You can also use another RNA-LLM . 
 
 
 
