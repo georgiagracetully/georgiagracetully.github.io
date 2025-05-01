@@ -17,6 +17,10 @@ However, I furthermore wanted to fine-tune RibonanzaNet to predict ligand-bindin
 | Tryptophan   | AGGACCGG&CCGCCACU        | ((xxx(((&)))xxx))             | 2.4 mM         | 1.3               |
 | Theophylline | GAUACCAG&CCCUUGGCAGC     | (xxx((((&)xxx)))xxx)          | 2.0 mM         | 20                |
 
+
 This table is adapted from Supplementary Table 14 from the [paper](https://www.nature.com/articles/s41592-022-01605-0#Sec36) **RNA secondary structure packages evaluated and improved by high-throughput experiments** . 
 
+My first attempt at fine-tuning involved manipulating how the model processed the sequence features. The most simple example inlcuded just passing the mean of the sequence feature into a linear layer with an output of 2 (for both the log of the riboswitch KD with and without ligand bound). However, my attempts at processing the sequence features did not work, and predictions on the test set were essentially the same for each sequence. 
+
+My second attempt  at fine-tuning 
 
