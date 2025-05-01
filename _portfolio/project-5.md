@@ -3,7 +3,7 @@ title: "Fall Project 1: Das Lab"
 excerpt: "Finetuning RibonanzaNet to Predict RNA/small-molecule interactions"
 collection: portfolio
 ---
-Previously, it has been demonstrated that probing RNA with chemical modification reagents, also known as chemical mapping or chemical footprinting, can be used to identify ligand-binding regions on RNAs comparing site-specific reactivity changes of nucleotides incubated with small molecules. [12] My plan was to apply this proof-of-concept result with the Das Lab's high-throughput chemical mapping protocol to generate a dataset of millions to billions of RNA-ligand interactions to develop a deep learning model that predicts sequence-specific binding of small molecules. 
+Previously, it has been demonstrated that probing RNA with chemical modification reagents, also known as chemical mapping or chemical footprinting, can be used to identify ligand-binding regions on RNAs comparing site-specific reactivity changes of nucleotides incubated with small molecules. [1,2] My plan was to apply this proof-of-concept result with the Das Lab's high-throughput chemical mapping protocol to generate a dataset of millions to billions of RNA-ligand interactions to develop a deep learning model that predicts sequence-specific binding of small molecules. 
 
 After demonstrating that the trained model could accurately predict both binding affinity and binding location using RNA and small molecule features, my initial goal was to fine-tune it to identify small molecule binders for pathogenic RNA targets—aiming to disrupt their structure and, consequently, their function. However, my interest gradually shifted toward designing RNA aptamers for diagnostic applications or for complex biological computation. My plan was then to expand the model by incorporating a reinforcement learning framework to generate designs for high-affinity aptamers for any given small molecule input.
 
@@ -13,7 +13,7 @@ A pilot experiment was performed July 2024 performing the SHAPE chemical mapping
 
 I fine-tuned multiple models of RibonanzaNet, adjusting hyperparameters and model architecture. At first, I tried to finetune RibonanzaNet alongside an embedding generator block so that the model could generalize beyond the initial 7 small molecules in the training data. But, the training time was taking too long (around 2 hours/epoch) for a pilot experiment with the primary goal being to test whether RibonanzaNet already contains the information necessary within RNA sequence and/or pairwise embeddings to predict interactions with small molecules (given just a small initial amount of data for training). 
 
-The base RibonanzaNet model was trained on data from two sepearate chemical probing techniques: SHAPE (Selective Acylation of the 2' Hydroxyl as Analyzed by Primer Extension) probing with the electrophilic reagent 2-aminopyridine-3-carboxylic acid imidazolide (2A3) [13] as well as DMS chemical footprinting [14]. My initial experiment was simple: adjust the final decoder layer of RibonanzaNet to instead predict 2-8 reactivity profiles, with each reactivity profile being a new small molecule condition. I would first assess model performance through quick visual checks on heat maps of experimental and predicted reactivity profiles under each condition. If the predictions looked promising, I would then generate a more robust quantitative analysis to benchmark model predictions. 
+The base RibonanzaNet model was trained on data from two sepearate chemical probing techniques: SHAPE (Selective Acylation of the 2' Hydroxyl as Analyzed by Primer Extension) probing with the electrophilic reagent 2-aminopyridine-3-carboxylic acid imidazolide (2A3) [3] as well as DMS chemical footprinting [4]. My initial experiment was simple: adjust the final decoder layer of RibonanzaNet to instead predict 2-8 reactivity profiles, with each reactivity profile being a new small molecule condition. I would first assess model performance through quick visual checks on heat maps of experimental and predicted reactivity profiles under each condition. If the predictions looked promising, I would then generate a more robust quantitative analysis to benchmark model predictions. 
 
 ## The Experiment 
 
@@ -109,7 +109,13 @@ You can clone this [repo](https://github.com/georgiagracetully/georgiagracetully
 
 References  
 
-(12) Martin, S.; Blankenship, C.; Rausch, J. W.; Sztuba-Solinska, J. Using SHAPE-MaP to Probe Small Molecule-RNA Interactions. Methods 2019, 167, 105–116. 
+Bibliography
+
+(1)	Martin, S.; Blankenship, C.; Rausch, J. W.; Sztuba-Solinska, J. Using SHAPE-MaP to Probe Small Molecule-RNA Interactions. Methods 2019, 167, 105–116. https://doi.org/10.1016/j.ymeth.2019.04.009.  
+(2)	Zeller, M. J.; Favorov, O.; Li, K.; Nuthanakanti, A.; Hussein, D.; Michaud, A.; Lafontaine, D. A.; Busan, S.; Serganov, A.; Aubé, J.; Weeks, K. M. SHAPE-Enabled Fragment-Based Ligand Discovery for RNA. Proc. Natl. Acad. Sci. U. S. A. 2022, 119 (20), e2122660119. https://doi.org/10.1073/pnas.2122660119.  
+(3)	Wilkinson, K. A.; Merino, E. J.; Weeks, K. M. Selective 2’-Hydroxyl Acylation Analyzed by Primer Extension (SHAPE): Quantitative RNA Structure Analysis at Single Nucleotide Resolution. Nat. Protoc. 2006, 1 (3), 1610–1616. https://doi.org/10.1038/nprot.2006.249.  
+(4)	Tijerina, P.; Mohr, S.; Russell, R. DMS Footprinting of Structured RNAs and RNA-Protein Complexes. Nat. Protoc. 2007, 2 (10), 2608–2623. https://doi.org/10.1038/nprot.2007.380.  
+
 
 
 
