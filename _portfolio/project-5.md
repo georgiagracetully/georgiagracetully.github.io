@@ -104,6 +104,7 @@ Tetr    0.552999
   <img src="/images/quant_analysis.png">
 </div>
 
+You can clone this [repo](https://github.com/georgiagracetully/georgiagracetully.github.io/tree/master/notebooks/sm_data) and then run the [jupyter NB](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/sm_data/Selected_Plots_RibonanzaNet_SM_Quantitative_Data_Analysis.ipynb) within this repo to try evaluating predictions by changing the threshold required for a nucleotide to be "flagged". 
 
 
 References  
