@@ -74,7 +74,19 @@ There is still much need for improvment in terms of accuracy, however this is a 
 
 ## Selected Results - Quantitative 
 
-One quantitative metric I used was to flag nucleotides that are in top 80% of reactivity difference, compute a sliding window sum of flagged nucleotides, and then compute a PCC of predictions with experimental flagged nucleotides. 
+The first quantitative metric that was also used to evaluate improvement during training is computing a pearson correlation coefficient between the experimental reactivity vectors and predictions. For RibonanzaNet-SM 005, here are the computed PCCs per each condition: 
+
+
+Average PCC per condition:
+Argi    0.151971  
+Eryt    0.200652  
+Kana    0.278094  
+Mito    0.746358  
+Paro    0.555189  
+Spec    0.127898  
+Tetr    0.611173  
+
+Another quantitative metric I used was to flag nucleotides that are in top 80% of reactivity difference, compute a sliding window sum of flagged nucleotides, and then compute a PCC of predictions with experimental flagged nucleotides. 
 
 Average PCC per condition:  
 Argi    0.164781  
