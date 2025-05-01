@@ -79,6 +79,7 @@ The first quantitative metric that was also used to evaluate improvement during 
 
 
 Average PCC per condition:
+
 Argi    0.151971  
 Eryt    0.200652  
 Kana    0.278094  
