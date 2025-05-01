@@ -63,9 +63,13 @@ Here, I am showing how adding in the raw reactivity vector during training helps
 
 On the left, is reactivity difference heatmap for sequences 50-100 without the raw reactivity vector during training, and on the right is with the raw reactivity vector included. You can see that there are a few sequences with what appears to be significant reactivity differences learned by the right model. 
 
+### RibonanzaNet-004 No absolute reactivity vector included during training
+
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="/images/eryt_qual_004.png">
 </div>
+
+### RibonanzaNet-005 Includes all reactivity differences, and the absolute reactivity vector 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="/images/eryt_qual_005.png">
