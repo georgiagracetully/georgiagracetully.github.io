@@ -27,8 +27,19 @@ My second attempt at fine-tuning involved manipulating the *pairwise features* .
 
 I actually fine-tuned RibonanzaNet on this data (which I called the finetuned model "RibonanzaNet-EB" ) within a Jupyter NB with a gpu backend through a slurm supercomputer. You can see the Jupyter NB [Here](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/eb_data/RibonanzaNet_EB_RS_tuning.ipynb). You can download the training data from the archived [EB repository](https://github.com/eternagame/EternaBench/) and [RibonanzaNet](https://github.com/Shujun-He/RibonanzaNet). You can also use another RNA-LLM . 
 
+Now using the same training /test split as EternaFold, here are some results : 
 
+Comparing PCC with EternaFold : 
 
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/Just_eternafold_and_rneteb_Kd-lig_Ribologic_FMN.png">
+</div>
+  
 
+Because many if not most riboswitches in the EternaBench dataset did not have significant differences in MS2 binding affinity with and without ligand bound, to test whether the model can predict RNA structure with ligand bound I also fine-tuned RibonanzaNet on the activation ratio, and evaluated results : 
 
-
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/images/Just_eternafold_and_rneteb_log_AR.png">
+</div>
+  
+RibonanzaNet does not seem to be picking up on 
