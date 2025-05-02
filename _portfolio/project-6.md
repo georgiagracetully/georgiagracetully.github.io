@@ -42,4 +42,4 @@ Because many if not most riboswitches in the EternaBench dataset did not have si
   <img src="/images/Just_eternafold_and_rneteb_log_AR.png">
 </div>
   
-RibonanzaNet does not seem to be picking up on 
+RibonanzaNet is not able to predict RNA binding affinity, given a shift in ensemble due to ligand binding. However, combined with a pretrained model on reactivity data with ligand bound (see [here](https://georgiagracetully.github.io/portfolio/project-5/)), I am hopeful that this would be possible. 
