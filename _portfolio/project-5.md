@@ -1,6 +1,6 @@
 ---
 title: "Fall Project 1: Das Lab"
-excerpt: "Finetuning RibonanzaNet to Predict RNA/small-molecule interactions"
+excerpt: "Fine-tuning RibonanzaNet to Predict RNA/small-molecule interactions"
 collection: portfolio
 ---
 Previously, it has been demonstrated that probing RNA with chemical modification reagents, also known as chemical mapping or chemical footprinting, can be used to identify ligand-binding regions on RNAs comparing site-specific reactivity changes of nucleotides incubated with small molecules. [1,2] My plan was to apply this proof-of-concept result with the Das Lab's high-throughput chemical mapping protocol to generate a dataset of millions to billions of RNA-ligand interactions to develop a deep learning model that predicts sequence-specific binding of small molecules. 
