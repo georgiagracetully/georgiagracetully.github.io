@@ -13,4 +13,3 @@ My research interests are in using Machine Learning to understand and predict th
 
 Along those lines, I am interested in implementing the methods used by biological systems to perform complex computations for improving aritificial intelligence. 
 
-**Current Focus** : A unified framework for Reinforcement Fine-Tuning (RFT) of macromolecule LLMs for predictions and interpretations of specialized biochemical data. 
