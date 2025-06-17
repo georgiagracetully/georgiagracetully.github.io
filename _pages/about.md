@@ -9,7 +9,6 @@ redirect_from:
 
 I'm a second year graduate student at Stanford University. 
 
-My research interests are in using Machine Learning to understand and predict the structure and behavior of biochemical systems. The goal of my thesis project in the [Das Lab](https://daslab.stanford.edu) is to develop a generative model for RNA aptamer design. 
-
+My research interests are in using Machine Learning to understand and predict the structure and behavior of biochemical systems. I am currently rotating in [The Greenleaf Lab](https://greenleaf.stanford.edu/people) on a project capturing high-throughput DNA aptamer binding affinities. 
 
 
