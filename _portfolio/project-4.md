@@ -18,10 +18,6 @@ Regenerated heatmap of Z-scores of F-scores from EternaBench paper on ArchiveII 
 
 This is RibonanzaNet-SS trained with different checkpoints that vary in magnitude by the amount of training data. RibonanaNet is the RibonanzaNet-SS model trained on all 2 million sequences in the Ribonanza Dataset. RibonanzaNet A, B, C, D are models trained on 140k, 14k, 7k, and 1.4k training data, respectively. 
 
-Here is a barchart comparing the F-scores of a handful of models evaluated, including RNA-FM : 
-
-<br/><img src='/images/rnet_archiveII_barchart.png'>
-
 # RibonanzaNet Chemical Mapping Evaluation 
 
 A dataset of chemical mapping profiles using the [SHAPE](https://pmc.ncbi.nlm.nih.gov/articles/PMC4259394/pdf/nihms606325.pdf) reagent 1M7 of natural and human-designed RNAs was compiled, and correlation coefficients were computed, with z-score heatmaps generated. 
