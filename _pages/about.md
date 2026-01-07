@@ -9,6 +9,5 @@ redirect_from:
 
 I'm a second year graduate student at Stanford University. 
 
-My research interests are in using Machine Learning to understand and predict the structure and behavior of biochemical systems. I am currently rotating in [The Greenleaf Lab](https://greenleaf.stanford.edu/people).
-
+In [The Greenleaf Lab](https://greenleaf.stanford.edu/people), I am using high-throughput microarray DNA aptamer binding data to predict the chemical composition of solutions. Going forward I want to use this data to predict and design aptamers for biosensing applications.  
 
