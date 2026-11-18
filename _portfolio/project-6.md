@@ -27,6 +27,8 @@ My second attempt at fine-tuning involved manipulating the *pairwise features*. 
 
 I fine-tuned RibonanzaNet on this data (I called the fine-tuned model "RibonanzaNet-EB") in Jupyter notebooks running on GPU nodes of an HPC cluster (Slurm). You can see the training notebooks [here](https://github.com/georgiagracetully/RNET-EB). You can download the training data from the archived [EternaBench repository](https://github.com/eternagame/EternaBench/) and the base model from [RibonanzaNet](https://github.com/Shujun-He/RibonanzaNet). You can also use another RNA foundation model. 
 
+**In short:** RibonanzaNet-EB beats EternaFold at predicting MS2 binding without ligand (r = 0.71 vs. 0.54), but it fails to predict how ligand binding changes that binding: on the activation ratio it reaches only r = 0.03, the worst result of any package compared.
+
 For the data split, I trained on EternaFold's riboswitch training set, used EternaFold's holdout set as a validation set for choosing checkpoints, and tested on the remaining 5,341 riboswitches in the dataset that are in neither of those sets. Here are the results: 
 
 Predicting MS2 binding affinity without ligand (K-lig), compared with EternaFold: 
@@ -43,4 +45,4 @@ Because many if not most riboswitches in the EternaBench dataset did not have si
   <img src="/images/Just_eternafold_and_rneteb_log_AR.png" alt="Predicted vs experimental log activation ratio: EternaFold r = 0.24, RibonanzaNet-EB r = 0.03">
 </div>
   
-Here RibonanzaNet-EB fails (r = 0.03): it predicts nearly the same activation ratio for every riboswitch, which is why its RMSE looks lower than EternaFold's despite having essentially no correlation. In other words, this fine-tuned model can predict MS2 binding in the absence of ligand, but not the shift in structural ensemble caused by ligand binding. Combined with a model pretrained on reactivity data with ligand bound (see [here](/portfolio/project-5/)), I am hopeful that this would be possible. 
+Here RibonanzaNet-EB fails (r = 0.03): it predicts nearly the same activation ratio for every riboswitch, which is why its RMSE looks lower than EternaFold's despite having essentially no correlation. This is the worst activation-ratio result of any package: computed the same way for every package on the 5,341 test riboswitches (the activation ratio implied by each package's predicted K-lig and K+lig), the 19 EternaBench packages reach r = 0.11–0.17 against measured activation ratios, while RibonanzaNet-EB reaches r = 0.01. In other words, this fine-tuned model can predict MS2 binding in the absence of ligand, but not the shift in structural ensemble caused by ligand binding. Combined with a model pretrained on reactivity data with ligand bound (see [here](/portfolio/project-5/)), I am hopeful that this would be possible. 
