@@ -27,17 +27,17 @@ My second attempt at fine-tuning involved manipulating the *pairwise features*. 
 
 I fine-tuned RibonanzaNet on this data (I called the fine-tuned model "RibonanzaNet-EB") in Jupyter notebooks running on GPU nodes of an HPC cluster (Slurm). You can see the training notebooks [here](https://github.com/georgiagracetully/RNET-EB). You can download the training data from the archived [EternaBench repository](https://github.com/eternagame/EternaBench/) and the base model from [RibonanzaNet](https://github.com/Shujun-He/RibonanzaNet). You can also use another RNA foundation model. 
 
-**In short:** RibonanzaNet-EB beats EternaFold at predicting MS2 binding without ligand (r = 0.71 vs. 0.54), but it fails to predict how ligand binding changes that binding: on the activation ratio it reaches only r = 0.03, the worst result of any package compared.
+**In short:** RibonanzaNet-EB beats EternaFold at predicting MS2 binding without ligand (r = 0.68 vs. 0.54 on 5,341 held-out riboswitches), but it fails to predict how ligand binding changes that binding: on the activation ratio it reaches only r = 0.03, the worst result of any package compared.
 
 For the data split, I trained on EternaFold's riboswitch training set, used EternaFold's holdout set as a validation set for choosing checkpoints, and tested on the remaining 5,341 riboswitches in the dataset that are in neither of those sets. Here are the results: 
 
 Predicting MS2 binding affinity without ligand (K-lig), compared with EternaFold: 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/images/Just_eternafold_and_rneteb_Kd-lig_Ribologic_FMN.png" alt="Predicted vs experimental log K-lig: EternaFold r = 0.54, RibonanzaNet-EB r = 0.71">
+  <img src="/images/rneteb_vs_eternafold_Kd-lig_test_set.png" alt="Predicted vs measured log K-lig on 5,341 test riboswitches: EternaFold r = 0.54, RibonanzaNet-EB r = 0.68">
 </div>
 
-RibonanzaNet-EB correlates better with experiment than EternaFold (r = 0.71 vs 0.54). Note that RMSE favors the fine-tuned model by construction, since it was trained directly on this target while EternaFold's predictions are not calibrated to this scale, so correlation is the fairer comparison.
+RibonanzaNet-EB correlates better with experiment than EternaFold (r = 0.68 vs 0.54). These numbers are computed from the committed predictions in [RNET-EB](https://github.com/georgiagracetully/RNET-EB), whose `smoke_test.py` checks that the committed weights reproduce them. Note that RMSE favors the fine-tuned model by construction, since it was trained directly on this target while EternaFold's predictions are not calibrated to this scale, so correlation is the fairer comparison.
 
 Because many if not most riboswitches in the EternaBench dataset did not have significant differences in MS2 binding affinity with and without ligand bound, to test whether the model can predict the effect of ligand binding I also fine-tuned RibonanzaNet on the activation ratio (AR), and evaluated results: 
 
