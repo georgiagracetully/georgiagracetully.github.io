@@ -59,9 +59,9 @@ A look at individual reactivity profiles (not normalized) for each condition for
 
 From these profiles, you can see that the model may not be as good at predicting large reactivity differences for conditions with a lower frequency of significant reactivity differences. 
 
-Here, I am showing how adding in the raw reactivity vector during training helps the model pick up on differences between conditions with fewer binding events (such as Erythromycin): 
+Here I compare Erythromycin, a condition with few binding events, with and without the absolute reactivity vector in training. Each figure shows measured (left) and predicted (right) reactivity differences for test sequences 50-100, on the same color scale. 
 
-On the left is the reactivity difference heatmap for sequences 50-100 without the raw reactivity vector during training, and on the right is with the raw reactivity vector included. You can see that there are a few sequences with what appears to be significant reactivity differences learned by the right model. 
+Adding the absolute vector made the model predict somewhat larger changes (99th percentile of predicted |difference| 0.18 vs. 0.11), but both models still predict much smaller changes than were measured (0.72), and correlation with experiment did not improve (mean per-sequence r = 0.20 with vs. 0.23 without, across all 546 test sequences). 
 
 ### RibonanzaNet-004 No absolute reactivity vector included during training
 

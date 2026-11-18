@@ -10,7 +10,9 @@ Based on cluster profiles from all algorithms, we concluded that only two domina
 
 [View Notebook](https://github.com/georgiagracetully/georgiagracetully.github.io/blob/master/notebooks/making_plots/Making_plots.ipynb)
 
-Note: By just scanning the notebook you may think that particle ids are colored with corresponding clusters from each algorithm, but they are colored according to their separation into "open" and "closed" states by the simple 3D classification algorithm, which by eye corresponds with clusters from all four heterogeneity algorithms. However, if you look at the e2gmm plot in Figure 4, you can see noticeable overlap of particles that were identified into different clusters. 
+Note: By just scanning the notebook you may think that particle ids are colored with corresponding clusters from each algorithm, but they are colored according to their separation into "open" and "closed" states by the simple 3D classification algorithm, which by eye corresponds with clusters from all four heterogeneity algorithms. In the e2gmm latent space (below: PCA of all 4 latent dimensions), the two classes separate along PC0 but overlap near the boundary, where about 9% of particles sit closer to the other class's centroid than to their own.
+
+<br/><img src='/images/e2gmm_pca_4LD.png' alt='e2gmm latent space (PCA of 4 latent dimensions) colored by open and closed 3D classes'>
 
 <br/><img src='/images/image9.png' alt='ROOL map in the first conformation'> <br/><img src='/images/image10.png' alt='ROOL map in the second conformation'>
 Pretty obvious from the images above which conformation is "open" or "closed". 

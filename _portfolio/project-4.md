@@ -26,7 +26,7 @@ Here is a bar chart comparing Pearson correlation coefficients with RibonanzaNet
 
 <br/><img src='/images/pcc_chemmapping_barchart.svg' alt='Bar chart of Pearson correlation with 1M7 chemical mapping data by model'>
 
-However, I am not confident that this 1M7 dataset is a good dataset for evaluating model performance, considering it is very noisy and spiky. Here are two reactivity profiles that show 1M7 raw data with some of the package-predicted reactivity profiles. Note, the simulated reactivity profile from secondary structure prediction models comes from converting base pairing matrices to probability unpaired vectors (punp vectors), which is outlined in the Das Lab [arnie](https://github.com/DasLab/arnie) wrapper. 
+Here are two example RNAs from the Round 1 data, each showing its own measured 1M7 reactivity alongside the packages' predicted reactivity profiles. On these two designs most packages track the measured profile reasonably well (Pearson r ≈ 0.6–0.8; RibonanzaNet-DMS ≈ 0.5), although the measured profiles are spikier than the predictions. Note, the simulated reactivity profile from secondary structure prediction models comes from converting base pairing matrices to probability unpaired vectors (punp vectors), which is outlined in the Das Lab [arnie](https://github.com/DasLab/arnie) wrapper. 
 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
@@ -47,8 +47,6 @@ These riboswitches were designed so that upon binding one of the input ligands, 
 Because the MS2 aptamer is a hairpin, a zero-shot evaluation on riboswitch binding affinities without ligand bound (K-lig) was performed using RibonanzaNet-SS bpp matrices on the EternaBench holdout dataset. Evaluating checkpoints of RibonanzaNet-SS trained with different amounts of data showed how prediction accuracy depends on training data quantity (with the model architecture held fixed).  
 
 <br/><img src='/images/rnetss_rswitch.png' alt='Z-scores for riboswitch K-lig prediction across RibonanzaNet-SS checkpoints and other packages'>  
-
-How I generated these predictions can be accessed in [this](https://github.com/georgiagracetully/RibonanzaNet_EternaBench_Eval) GitHub repo. 
 
 Relevant Papers: 
 
